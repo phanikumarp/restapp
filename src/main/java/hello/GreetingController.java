@@ -17,8 +17,7 @@ public class GreetingController {
     private final AtomicLong counter = new AtomicLong();
     public static Map<BadKey,String> leakMap = new HashMap<>();
     
-   
-    
+  
     @RequestMapping("/greeting")
     public Greeting greeting(@RequestParam(value="name", defaultValue="World") String name) {
         //memory leak code  
